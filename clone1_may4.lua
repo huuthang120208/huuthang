@@ -5,20 +5,20 @@ function scriptautov4()
         ["Lever"] = true, 
         ["InVIPServ"] = true, 
         ["HelperNameList"] = { 
-            "VN5ByLx5",
-            "InezHarrellbdys38751"
+            "helper_account_7",
+            "helper_account_8"
         },
         ["V4FarmList"] = { 
-            "willo_7xw",
-            "backs2sk",
-            "insub93s",
-            "snowy_8de",
-            "reps_2ta",
-            "unpad_7ot",
-            "grati3uh",
-            "smite_87z",
-            "equiv8zk",
-            "spell1x8"
+            "farm_account_61",
+            "farm_account_62",
+            "farm_account_63",
+            "farm_account_64",
+            "farm_account_65",
+            "farm_account_66",
+            "farm_account_67",
+            "farm_account_68",
+            "farm_account_69",
+            "farm_account_70"
         }
     }
     getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
