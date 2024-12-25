@@ -45,8 +45,6 @@ function SendToWebhook(webhookUrl, message)
 end
 
 function CheckRace()
-    local previous_v227, previous_v228, previous_v229 = nil, nil, nil
-    local v229, v228, v227 = game.ReplicatedStorage.Remotes.CommF_:InvokeServer("UpgradeRace", "Check")
     local v111 = game.ReplicatedStorage.Remotes.CommF_:InvokeServer("Alchemist", "1")
     local v113 = game.ReplicatedStorage.Remotes.CommF_:InvokeServer("Wenlocktoad", "1")
     local playerName = game.Players.LocalPlayer.Name
@@ -56,14 +54,16 @@ function CheckRace()
     if fragment < 13000 then
         thongbao = "số fragment : " .. tostring(fragment) .. "  ( chưa đủ 13k fragment ) @everyone"
     else
-        thongbao = "số fragment : " .. tostring(fragment) .. "  ( Đủ 13k fragment )"
+        thongbao = "số fragment : " .. tostring(fragment) 
     end
     if game.Players.LocalPlayer.Character:FindFirstChild("RaceTransformed") then
+        local previous_v227, previous_v228, previous_v229 = nil, nil, nil
+        local v229, v228, v227 = game.ReplicatedStorage.Remotes.CommF_:InvokeServer("UpgradeRace", "Check")
         if v227 ~= previous_v227 or v228 ~= previous_v228 or v229 ~= previous_v229 then
             previous_v227, previous_v228, previous_v229 = v227, v228, v229
             local statusMessage = ""
             if v229 == 1 then
-                statusMessage = "Required Train More , ( gear 1 )"
+                statusMessage = "Required Train More ( gear 1 )"
             elseif v229 == 0 then
                 statusMessage = "Ready for Trial"
             elseif v229 == 2 then
@@ -87,6 +87,8 @@ function CheckRace()
                 "https://discord.com/api/webhooks/1312650928821768212/5nx2ScEE--inMxNOrk2RpAKsPKGR8YCLdrkN8C7JZT6xQkGfHmUQTY7hz1ftLeeepwqW",
                 "Tên người chơi: " .. playerName .. "\nThông tin: " .. race .. " V4 " ..  "\nTrạng thái ancient quests: " .. statusMessage .. "\n" .. thongbao
             )
+        else
+            print("giá trị đã lưu")
         end
     elseif v113 == -2 then
         SendToWebhook(
