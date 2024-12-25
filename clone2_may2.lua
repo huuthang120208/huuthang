@@ -5,20 +5,20 @@ function scriptautov4()
         ["Lever"] = true, 
         ["InVIPServ"] = true, 
         ["HelperNameList"] = { 
-            "helper_account_3",
-            "helper_account_4"
+            "AngelaTippettppqm217",
+            "xLWzqKcHfYx"
         },
         ["V4FarmList"] = { 
-            "farm_account_31",
-            "farm_account_32",
-            "farm_account_33",
-            "farm_account_34",
-            "farm_account_35",
-            "farm_account_36",
-            "farm_account_37",
-            "farm_account_38",
-            "farm_account_39",
-            "farm_account_40"
+            "accrrbbloxx3747",
+            "accrrffroblox6293",
+            "accrrffroblox5690",
+            "HuynhWanda34",
+            "roblox12017747",
+            "ClarkMaurice948",
+            "nvavss442363",
+            "nvavsvs181925",
+            "ClaytonIsabella59",
+            "accrrbbloxx5278"
         }
     }
     getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
@@ -119,20 +119,21 @@ function CheckRace()
     end
 end
 function jointeam()
- do -- Team Script
-    repeat 
-        ChooseTeam = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam",true)
-        UIController = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("UIController",true)
-        if UIController and ChooseTeam then
-            if ChooseTeam.Visible then
-                for i,v in pairs(getgc()) do
-                    if type(v) == "function" and getfenv(v).script == UIController then
-                        local constant = getconstants(v)
-                        pcall(function()
-                            if constant[1] == "Marines" and #constant == 1 then
+ do
+    repeat
+        local player = game:GetService("Players").LocalPlayer
+        local mainGui = player.PlayerGui:FindFirstChild("Main (minimal)")
+        if mainGui then
+            local ChooseTeam = mainGui:FindFirstChild("ChooseTeam", true)
+            if ChooseTeam and ChooseTeam.Visible then
+                for i, v in pairs(getgc()) do
+                    if type(v) == "function" then
+                        local success, constants = pcall(getconstants, v)
+                        if success and constants and table.find(constants, "Marines") then
+                            pcall(function()
                                 v(shared.Team or "Marines")
-                            end
-                        end)
+                            end)
+                        end
                     end
                 end
             end
