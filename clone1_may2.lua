@@ -133,7 +133,10 @@ function jointeam()
  end
 end
 jointeam()
-wait(5)
+repeat task.wait() until game:IsLoaded()
+repeat task.wait() until game.Players
+repeat task.wait() until game.Players.LocalPlayer
+repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
 while true do
     if game.PlaceId == 7449423635 then
         print("Đã tới PlaceId 7449423635, dừng lại.")
