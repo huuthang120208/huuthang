@@ -43,7 +43,7 @@ function SendToWebhook(webhookUrl, message)
         })
     end)
 end
-
+local previousStatusMessage = ""
 function CheckRace()
     local v111 = game.ReplicatedStorage.Remotes.CommF_:InvokeServer("Alchemist", "1")
     local v113 = game.ReplicatedStorage.Remotes.CommF_:InvokeServer("Wenlocktoad", "1")
@@ -51,7 +51,6 @@ function CheckRace()
     local race = game.Players.LocalPlayer.Data.Race.Value
     local fragment = game.Players.LocalPlayer.Data.Fragments.Value
     local thongbao = ""
-    local previousStatusMessage = ""
     if fragment < 13000 then
         thongbao = "số fragment : " .. tostring(fragment) .. "  ( chưa đủ 13k fragment ) @everyone"
     else
