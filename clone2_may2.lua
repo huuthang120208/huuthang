@@ -51,7 +51,7 @@ function CheckRace()
     local race = game.Players.LocalPlayer.Data.Race.Value
     local fragment = game.Players.LocalPlayer.Data.Fragments.Value
     local thongbao = ""
-    local previous_v227, previous_v228, previous_v229 = nil, nil, nil
+    local previousStatusMessage = ""
     if fragment < 13000 then
         thongbao = "số fragment : " .. tostring(fragment) .. "  ( chưa đủ 13k fragment ) @everyone"
     else
@@ -59,8 +59,6 @@ function CheckRace()
     end
     if game.Players.LocalPlayer.Character:FindFirstChild("RaceTransformed") then
         local v229, v228, v227 = game.ReplicatedStorage.Remotes.CommF_:InvokeServer("UpgradeRace", "Check")
-        if v227 ~= previous_v227 or v228 ~= previous_v228 or v229 ~= previous_v229 then
-            previous_v227, previous_v228, previous_v229 = v227, v228, v229
             local statusMessage = ""
             if v229 == 1 then
                 statusMessage = "Required Train More ( gear 1 )"
@@ -83,13 +81,15 @@ function CheckRace()
             else
                 statusMessage = "Không đủ Yêu cầu"
             end
-            SendToWebhook(
+            if statusMessage ~= previousStatusMessage then
+              previousStatusMessage = statusMessage
+              SendToWebhook(
                 "https://discord.com/api/webhooks/1312650928821768212/5nx2ScEE--inMxNOrk2RpAKsPKGR8YCLdrkN8C7JZT6xQkGfHmUQTY7hz1ftLeeepwqW",
-                "Tên người chơi: " .. playerName .. "\nThông tin: " .. race .. " V4 " ..  "\nTrạng thái ancient quests: " .. statusMessage .. "\n" .. thongbao
-            )
-        else
-            print("giá trị đã lưu")
-        end
+                "Tên người chơi: " .. playerName .. "\nThông tin: " .. race .. " V4 " .. "\nTrạng thái ancient quests: " .. statusMessage .. "\n" .. thongbao
+              )
+            else
+            print("Không có thay đổi trong statusMessage")
+            end
     elseif v113 == -2 then
         SendToWebhook(
             "https://discord.com/api/webhooks/1313208538041946233/JZ8xcremwnzrrefPC7xTi9H0f45dM6qQ74ScolrBt6dJFHyai2pRYi27YclHIQHgFprl",
@@ -133,6 +133,7 @@ function jointeam()
  end
 end
 jointeam()
+wait(10)
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game.Players
 repeat task.wait() until game.Players.LocalPlayer
