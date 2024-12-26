@@ -51,13 +51,13 @@ function CheckRace()
     local race = game.Players.LocalPlayer.Data.Race.Value
     local fragment = game.Players.LocalPlayer.Data.Fragments.Value
     local thongbao = ""
+    local previous_v227, previous_v228, previous_v229 = nil, nil, nil
     if fragment < 13000 then
         thongbao = "số fragment : " .. tostring(fragment) .. "  ( chưa đủ 13k fragment ) @everyone"
     else
         thongbao = "số fragment : " .. tostring(fragment) 
     end
     if game.Players.LocalPlayer.Character:FindFirstChild("RaceTransformed") then
-        local previous_v227, previous_v228, previous_v229 = nil, nil, nil
         local v229, v228, v227 = game.ReplicatedStorage.Remotes.CommF_:InvokeServer("UpgradeRace", "Check")
         if v227 ~= previous_v227 or v228 ~= previous_v228 or v229 ~= previous_v229 then
             previous_v227, previous_v228, previous_v229 = v227, v228, v229
