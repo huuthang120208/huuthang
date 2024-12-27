@@ -57,6 +57,36 @@ function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, ga
         })
     end)
 end
+function SendToWebhook2(webhookUrl, playerName, race, thongbao, gatcan, color)
+    local http = syn and syn.request or http_request or request or nil
+    local embed = {
+        title = "Thông tin người chơi",
+        description = "Tên người chơi: **" .. playerName .. "**\n" ..
+                      "Tộc: **" .. race .. "**\n" ..
+                      "Thông báo: **" .. thongbao .. "**\n" ..
+                      "Gạt cần : **" .. gatcan .. "**\n",  
+        color = color,  
+        footer = {
+            text = "Check Race Status",
+        }
+    }
+
+    local payload = {
+        username = "Hữu Thắng hiện lên và nói",
+        embeds = {embed}
+    }
+
+    local success, response = pcall(function()
+        return http({
+            Url = webhookUrl,
+            Method = "POST",
+            Headers = {
+                ["Content-Type"] = "application/json"
+            },
+            Body = HttpService:JSONEncode(payload)
+        })
+    end)
+end
 
 local previousStatusMessage = ""
 function CheckRace()
@@ -116,17 +146,16 @@ function CheckRace()
             print("Không có thay đổi trong statusMessage")
             end
     elseif v113 == -2 then
-        SendToWebhook(
+        SendToWebhook2(
             "https://discord.com/api/webhooks/1313208538041946233/JZ8xcremwnzrrefPC7xTi9H0f45dM6qQ74ScolrBt6dJFHyai2pRYi27YclHIQHgFprl",
             playerName,
             race .. " V3",
-            "",
             thongbao,
             gatcan ,
             6029056 
         )
     elseif v111 == -2 then
-        SendToWebhook(
+        SendToWebhook2(
             "https://discord.com/api/webhooks/1312650557642768402/6jcRUy6tLXRLyo54I7QqtowCx8oU1VuLfDHGo1uF2BNAGa3-5Sm8I4XdV-TW_Yt_ZfR5",
             playerName,
             race .. " V2",
@@ -136,11 +165,10 @@ function CheckRace()
             11995680 
         )
     else
-        SendToWebhook(
+        SendToWebhook2(
             "https://discord.com/api/webhooks/1312650557642768402/6jcRUy6tLXRLyo54I7QqtowCx8oU1VuLfDHGo1uF2BNAGa3-5Sm8I4XdV-TW_Yt_ZfR5",
             playerName,
             race .. " V1",
-            "",
             thongbao,
             gatcan  .. "\n@everyone",
             11995680  
