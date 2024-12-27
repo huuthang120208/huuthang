@@ -28,6 +28,7 @@ end
 local HttpService = game:GetService("HttpService")
 function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, gatcan, color)
     local http = syn and syn.request or http_request or request or nil
+    local currentTime = os.date("%Y-%m-%d %H:%M:%S")
     local embed = {
         title = "Thông tin người chơi",
         description = "Tên người chơi: **" .. playerName .. "**\n" ..
@@ -37,7 +38,7 @@ function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, ga
                       "Gạt cần : **" .. gatcan .. "**\n",  
         color = color,  
         footer = {
-            text = "Check Race Status",
+            text = "Check Race Status" .. currentTime,
         }
     }
 
@@ -59,6 +60,7 @@ function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, ga
 end
 function SendToWebhook2(webhookUrl, playerName, race, thongbao, gatcan, color)
     local http = syn and syn.request or http_request or request or nil
+    local currentTime = os.date("%Y-%m-%d %H:%M:%S")
     local embed = {
         title = "Thông tin người chơi",
         description = "Tên người chơi: **" .. playerName .. "**\n" ..
@@ -67,7 +69,7 @@ function SendToWebhook2(webhookUrl, playerName, race, thongbao, gatcan, color)
                       "Gạt cần : **" .. gatcan .. "**\n",  
         color = color,  
         footer = {
-            text = "Check Race Status",
+            text = "Check Race Status" .. currentTime,
         }
     }
 
