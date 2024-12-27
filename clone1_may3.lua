@@ -26,12 +26,26 @@ function scriptautov4()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()  
 end
 local HttpService = game:GetService("HttpService")
-function SendToWebhook(webhookUrl, message)
+function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, gatcan, color)
     local http = syn and syn.request or http_request or request or nil
-    local payload = {
-        content = message, 
-        username = "Hữu Thắng hiện lên và nói"
+    local embed = {
+        title = "Thông tin người chơi",
+        description = "Tên người chơi: **" .. playerName .. "**\n" ..
+                      "Tộc: **" .. race .. "**\n" ..
+                      "Trạng thái ancient quests: **" .. statusMessage .. "**\n" ..
+                      "Thông báo: **" .. thongbao .. "**\n" ..
+                      "Gạt cần : **" .. gatcan .. "**\n",  
+        color = color,  
+        footer = {
+            text = "Check Race Status",
+        }
     }
+
+    local payload = {
+        username = "Hữu Thắng hiện lên và nói",
+        embeds = {embed}
+    }
+
     local success, response = pcall(function()
         return http({
             Url = webhookUrl,
@@ -43,6 +57,7 @@ function SendToWebhook(webhookUrl, message)
         })
     end)
 end
+
 local previousStatusMessage = ""
 function CheckRace()
     local v111 = game.ReplicatedStorage.Remotes.CommF_:InvokeServer("Alchemist", "1")
@@ -51,10 +66,16 @@ function CheckRace()
     local race = game.Players.LocalPlayer.Data.Race.Value
     local fragment = game.Players.LocalPlayer.Data.Fragments.Value
     local thongbao = ""
+    local gatcan = ""
     if fragment < 13000 then
         thongbao = "số fragment : " .. tostring(fragment) .. "  ( chưa đủ 13k fragment ) @everyone"
     else
         thongbao = "số fragment : " .. tostring(fragment) 
+    end
+    if game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer("CheckTempleDoor") == true then
+      gatcan = "Đã Gạt cần "
+    else
+      gatcan "Chưa Gạt cần "
     end
     if game.Players.LocalPlayer.Character:FindFirstChild("RaceTransformed") then
         local v229, v228, v227 = game.ReplicatedStorage.Remotes.CommF_:InvokeServer("UpgradeRace", "Check")
@@ -84,30 +105,49 @@ function CheckRace()
               previousStatusMessage = statusMessage
               SendToWebhook(
                 "https://discord.com/api/webhooks/1312650928821768212/5nx2ScEE--inMxNOrk2RpAKsPKGR8YCLdrkN8C7JZT6xQkGfHmUQTY7hz1ftLeeepwqW",
-                "Tên người chơi: " .. playerName .. "\nThông tin: " .. race .. " V4 " .. "\nTrạng thái ancient quests: " .. statusMessage .. "\n" .. thongbao
-              )
+                playerName,
+                race .. " V4",
+                statusMessage,
+                thongbao,
+                gatcan ,
+                6029056
+            )
             else
             print("Không có thay đổi trong statusMessage")
             end
     elseif v113 == -2 then
         SendToWebhook(
-            "https://discord.com/api/webhooks/1313208538041946233/JZ8xcremwnzrrefPC7xTi9H0f45dM6qQ74ScolrBt6dJFHyai2pRYi27YclHIQHgFprl",
-            "Tên người chơi: " .. playerName .. "\nThông tin: " .. race .. " V3" .. "\n" .. thongbao
+            "https://discord.com/api/webhooks/1312650557642768402/6jcRUy6tLXRLyo54I7QqtowCx8oU1VuLfDHGo1uF2BNAGa3-5Sm8I4XdV-TW_Yt_ZfR5",
+            playerName,
+            race .. " V3",
+            "",
+            thongbao,
+            gatcan ,
+            6029056 
         )
     elseif v111 == -2 then
         SendToWebhook(
             "https://discord.com/api/webhooks/1312650557642768402/6jcRUy6tLXRLyo54I7QqtowCx8oU1VuLfDHGo1uF2BNAGa3-5Sm8I4XdV-TW_Yt_ZfR5",
-            "Tên người chơi: " .. playerName .. "\nThông tin: " ..  race .. " V2" .. "\n" .. thongbao .. "\n@everyone"
+            playerName,
+            race .. " V2",
+            "",
+            thongbao,
+            gatcan .. "\n@everyone",
+            11995680 
         )
     else
         SendToWebhook(
             "https://discord.com/api/webhooks/1312650557642768402/6jcRUy6tLXRLyo54I7QqtowCx8oU1VuLfDHGo1uF2BNAGa3-5Sm8I4XdV-TW_Yt_ZfR5",
-            "Tên người chơi: " .. playerName .. "\nThông tin: " .. race .. " V1" .. "\n" .. thongbao .. "\n@everyone"
+            playerName,
+            race .. " V1",
+            "",
+            thongbao,
+            gatcan  .. "\n@everyone",
+            11995680  
         )
     end
 end
-function jointeam()
- do
+do
     repeat
         local player = game:GetService("Players").LocalPlayer
         local mainGui = player.PlayerGui:FindFirstChild("Main (minimal)")
@@ -129,9 +169,7 @@ function jointeam()
         wait(1)
     until game.Players.LocalPlayer.Team
     repeat wait() until game.Players.LocalPlayer.Character
- end
 end
-jointeam()
 repeat wait() until game.Players.LocalPlayer.Character
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game.Players
@@ -139,7 +177,6 @@ repeat task.wait() until game.Players.LocalPlayer
 repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
 while true do
     if game.PlaceId == 7449423635 then
-        print("Đã tới PlaceId 7449423635, dừng lại.")
         break
     elseif game.PlaceId == 2753915549 or game.PlaceId == 4442272183 then
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
@@ -162,8 +199,8 @@ if game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Co
 else
     scriptautov4()
 end
-while true do     
+while true do
+    wait(20)     
     CheckRace()
-    wait(20)
     print("Đã check race")
 end
