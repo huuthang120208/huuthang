@@ -34,11 +34,11 @@ function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, ga
         description = "Tên người chơi: **" .. playerName .. "**\n" ..
                       "Tộc: **" .. race .. "**\n" ..
                       "Trạng thái ancient quests: **" .. statusMessage .. "**\n" ..
-                      "Thông báo: **" .. thongbao .. "**\n" ..
+                      "số fragment : **" .. thongbao .. "**\n" ..
                       "Gạt cần : **" .. gatcan .. "**\n",  
         color = color,  
         footer = {
-            text = "Check Race Status" .. currentTime,
+            text = "Time : " .. currentTime,
         }
     }
 
@@ -46,7 +46,9 @@ function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, ga
         username = "Hữu Thắng hiện lên và nói",
         embeds = {embed}
     }
-
+    if tonumber(fragment) < 13000 then
+        payload.content = "@everyone"  -- Thêm @everyone vào content nếu fragment dưới 13k
+    end
     local success, response = pcall(function()
         return http({
             Url = webhookUrl,
@@ -65,7 +67,7 @@ function SendToWebhook2(webhookUrl, playerName, race, thongbao, gatcan, color)
         title = "Thông tin người chơi",
         description = "Tên người chơi: **" .. playerName .. "**\n" ..
                       "Tộc: **" .. race .. "**\n" ..
-                      "Thông báo: **" .. thongbao .. "**\n" ..
+                      "số fragment : **" .. thongbao .. "**\n" ..
                       "Gạt cần : **" .. gatcan .. "**\n",  
         color = color,  
         footer = {
@@ -75,6 +77,7 @@ function SendToWebhook2(webhookUrl, playerName, race, thongbao, gatcan, color)
 
     local payload = {
         username = "Hữu Thắng hiện lên và nói",
+        content = "@everyone",
         embeds = {embed}
     }
 
@@ -96,18 +99,20 @@ function CheckRace()
     local v113 = game.ReplicatedStorage.Remotes.CommF_:InvokeServer("Wenlocktoad", "1")
     local playerName = game.Players.LocalPlayer.Name
     local race = game.Players.LocalPlayer.Data.Race.Value
-    local fragment = game.Players.LocalPlayer.Data.Fragments.Value
     local thongbao = ""
     local gatcan = ""
+
+    local fragment = game.Players.LocalPlayer.Data.Fragments.Value
     if fragment < 13000 then
-        thongbao = "số fragment : " .. tostring(fragment) .. "  ( chưa đủ 13k fragment ) @everyone"
+        thongbao = tostring(fragment) .. "  ( chưa đủ 13k fragment ) @everyone"
     else
-        thongbao = "số fragment : " .. tostring(fragment) 
+        thongbao = tostring(fragment) 
     end
+
     if game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer("CheckTempleDoor") == true then
       gatcan = "Đã Gạt cần "
     else
-      gatcan "Chưa Gạt cần "
+      gatcan = "Chưa Gạt cần "
     end
     if game.Players.LocalPlayer.Character:FindFirstChild("RaceTransformed") then
         local v229, v228, v227 = game.ReplicatedStorage.Remotes.CommF_:InvokeServer("UpgradeRace", "Check")
@@ -230,7 +235,6 @@ else
     scriptautov4()
 end
 while true do
-    wait(20)     
+    wait(60)     
     CheckRace()
-    print("Đã check race")
 end
