@@ -25,6 +25,7 @@ function scriptautov4()
     getgenv().id = "1084122060307050586"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()  
 end
+local HttpService = game:GetService("HttpService")
 function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, gatcan, color, fragment)
     local http = syn and syn.request or http_request or request or nil
     local currentTime = os.date("%Y-%m-%d %H:%M:%S")
@@ -129,7 +130,7 @@ function CheckRace()
             elseif v229 == 3 then
                 statusMessage = "Required Train More ( gear 2 )"
             elseif v229 == 5 then
-                statusMessage = "You Are Done Your Race. ( full gear t10 )"
+                statusMessage = "You Are Done Your Race. ( full gear tier 10 )"
             elseif v229 == 6 then
                 statusMessage = "Upgrades completed: " .. v228 - 2 .. "/3, Need Trains More ( gear 3 )"
             elseif v229 == 8 then
