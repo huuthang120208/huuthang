@@ -79,8 +79,7 @@ function SendToWebhook2(webhookUrl, playerName, race, thongbao, gatcan, color)
         username = "Hữu Thắng hiện lên và nói",
         embeds = {embed}
     }
-    if v133 = -2 then 
-      print("v3")
+    if v133 == -2 then 
     else 
       payload.content = "@everyone"
     end
