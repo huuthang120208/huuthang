@@ -77,10 +77,13 @@ function SendToWebhook2(webhookUrl, playerName, race, thongbao, gatcan, color)
 
     local payload = {
         username = "Hữu Thắng hiện lên và nói",
-        content = "@everyone",
         embeds = {embed}
     }
-
+    if v133 = -2 then 
+      print("v3")
+    else 
+      payload.content = "@everyone"
+    end
     local success, response = pcall(function()
         return http({
             Url = webhookUrl,
@@ -168,7 +171,7 @@ function CheckRace()
             race .. " V2",
             "",
             thongbao,
-            gatcan .. "\n@everyone",
+            gatcan ,
             11995680 
         )
     else
@@ -177,7 +180,7 @@ function CheckRace()
             playerName,
             race .. " V1",
             thongbao,
-            gatcan  .. "\n@everyone",
+            gatcan ,
             11995680  
         )
     end
