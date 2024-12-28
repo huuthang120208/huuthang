@@ -30,16 +30,11 @@ function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, ga
     local currentTime = os.date("%Y-%m-%d %H:%M:%S")
     local embed = {
         title = "Thông tin người chơi",
-        description = "Tên người chơi: **" .. playerName .. "**
-" ..
-                      "Tộc: **" .. race .. "**
-" ..
-                      "Trạng thái ancient quests: **" .. statusMessage .. "**
-" ..
-                      "số fragment : **" .. thongbao .. "**
-" ..
-                      "Gạt cần : **" .. gatcan .. "**
-",  
+        description = "Tên người chơi: **" .. playerName .. "**\n" ..
+                      "Tộc: **" .. race .. "**\n" ..
+                      "Trạng thái ancient quests: **" .. statusMessage .. "**\n" ..
+                      "số fragment : **" .. thongbao .. "**\n" ..
+                      "Gạt cần : **" .. gatcan .. "**\n",  
         color = color,  
         footer = {
             text = "Time : " .. currentTime,
