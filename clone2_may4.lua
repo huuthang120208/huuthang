@@ -79,10 +79,6 @@ function SendToWebhook2(webhookUrl, playerName, race, thongbao, gatcan, color)
         username = "Hữu Thắng hiện lên và nói",
         embeds = {embed}
     }
-    if v133 == -2 then 
-    else 
-      payload.content = "@everyone"
-    end
     local success, response = pcall(function()
         return http({
             Url = webhookUrl,
@@ -155,10 +151,11 @@ function CheckRace()
             print("Không có thay đổi trong statusMessage")
             end
     elseif v113 == -2 then
-        SendToWebhook2(
+        SendToWebhook(
             "https://discord.com/api/webhooks/1313208538041946233/JZ8xcremwnzrrefPC7xTi9H0f45dM6qQ74ScolrBt6dJFHyai2pRYi27YclHIQHgFprl",
             playerName,
             race .. " V3",
+            "không có giá trị",
             thongbao,
             gatcan ,
             6029056 
