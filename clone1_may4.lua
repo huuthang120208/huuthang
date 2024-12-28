@@ -79,6 +79,7 @@ function SendToWebhook2(webhookUrl, playerName, race, thongbao, gatcan, color)
 
     local payload = {
         username = "Hữu Thắng hiện lên và nói",
+        payload.content = "@everyone",
         embeds = {embed}
     }
     local success, response = pcall(function()
@@ -169,7 +170,6 @@ function CheckRace()
             "https://discord.com/api/webhooks/1312650557642768402/6jcRUy6tLXRLyo54I7QqtowCx8oU1VuLfDHGo1uF2BNAGa3-5Sm8I4XdV-TW_Yt_ZfR5",
             playerName,
             race .. " V2",
-            "",
             thongbao,
             gatcan ,
             11995680 
