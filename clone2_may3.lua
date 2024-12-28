@@ -25,17 +25,21 @@ function scriptautov4()
     getgenv().id = "1084122060307050586"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()  
 end
-local HttpService = game:GetService("HttpService")
-function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, gatcan, color)
+function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, gatcan, color, fragment)
     local http = syn and syn.request or http_request or request or nil
     local currentTime = os.date("%Y-%m-%d %H:%M:%S")
     local embed = {
         title = "Thông tin người chơi",
-        description = "Tên người chơi: **" .. playerName .. "**\n" ..
-                      "Tộc: **" .. race .. "**\n" ..
-                      "Trạng thái ancient quests: **" .. statusMessage .. "**\n" ..
-                      "số fragment : **" .. thongbao .. "**\n" ..
-                      "Gạt cần : **" .. gatcan .. "**\n",  
+        description = "Tên người chơi: **" .. playerName .. "**
+" ..
+                      "Tộc: **" .. race .. "**
+" ..
+                      "Trạng thái ancient quests: **" .. statusMessage .. "**
+" ..
+                      "số fragment : **" .. thongbao .. "**
+" ..
+                      "Gạt cần : **" .. gatcan .. "**
+",  
         color = color,  
         footer = {
             text = "Time : " .. currentTime,
@@ -46,9 +50,10 @@ function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, ga
         username = "Hữu Thắng hiện lên và nói",
         embeds = {embed}
     }
-    if tonumber(fragment) < 13000 then
-        payload.content = "@everyone"  -- Thêm @everyone vào content nếu fragment dưới 13k
+    if tonumber(fragment) and tonumber(fragment) < 13000 then
+        payload.content = "@everyone"  
     end
+
     local success, response = pcall(function()
         return http({
             Url = webhookUrl,
@@ -60,6 +65,7 @@ function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, ga
         })
     end)
 end
+
 function SendToWebhook2(webhookUrl, playerName, race, thongbao, gatcan, color)
     local http = syn and syn.request or http_request or request or nil
     local currentTime = os.date("%Y-%m-%d %H:%M:%S")
@@ -71,7 +77,7 @@ function SendToWebhook2(webhookUrl, playerName, race, thongbao, gatcan, color)
                       "Gạt cần : **" .. gatcan .. "**\n",  
         color = color,  
         footer = {
-            text = "Check Race Status" .. currentTime,
+            text = "Time : " .. currentTime,
         }
     }
 
@@ -145,7 +151,8 @@ function CheckRace()
                 statusMessage,
                 thongbao,
                 gatcan ,
-                6029056
+                6029056,
+                fragment
             )
             else
             print("Không có thay đổi trong statusMessage")
@@ -158,7 +165,8 @@ function CheckRace()
             "không có giá trị",
             thongbao,
             gatcan ,
-            6029056 
+            6029056,
+            fragment
         )
     elseif v111 == -2 then
         SendToWebhook2(
