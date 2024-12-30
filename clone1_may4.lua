@@ -185,7 +185,8 @@ function CheckRace()
         )
     end
 end
-do
+function jointeam()
+ do
     repeat
         local player = game:GetService("Players").LocalPlayer
         local mainGui = player.PlayerGui:FindFirstChild("Main (minimal)")
@@ -207,12 +208,9 @@ do
         wait(1)
     until game.Players.LocalPlayer.Team
     repeat wait() until game.Players.LocalPlayer.Character
+ end
 end
-repeat wait() until game.Players.LocalPlayer.Character
-repeat task.wait() until game:IsLoaded()
-repeat task.wait() until game.Players
-repeat task.wait() until game.Players.LocalPlayer
-repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+jointeam()
 while true do
     if game.PlaceId == 7449423635 then
         break
