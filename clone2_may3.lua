@@ -5,7 +5,7 @@ function scriptautov4()
         ["Lever"] = true, 
         ["InVIPServ"] = true, 
         ["HelperNameList"] = { 
-            "thanghuynh111",
+            "altruizmuke",
             "yzuygnxzxv83024"
         },
         ["V4FarmList"] = { 
