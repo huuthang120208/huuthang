@@ -6,7 +6,7 @@ function scriptautov4()
         ["InVIPServ"] = true, 
         ["HelperNameList"] = { 
             "VanNhiigoq64321",
-            "shopeeroblox_9IEXXN"
+            "quangdkr13"
         },
         ["V4FarmList"] = { 
             "accrrffroblox4788",
