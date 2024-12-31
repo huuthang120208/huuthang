@@ -6,7 +6,7 @@ function scriptautov4()
         ["InVIPServ"] = true, 
         ["HelperNameList"] = { 
             "altruizmuke",
-            "yzuygnxzxv83024"
+            "thanghuynh111"
         },
         ["V4FarmList"] = { 
             "nvavsvs502690",
@@ -105,7 +105,7 @@ function CheckRace()
 
     local fragment = game.Players.LocalPlayer.Data.Fragments.Value
     if fragment < 13000 then
-        thongbao = tostring(fragment) .. "  ( chưa đủ 13k fragment ) @everyone"
+        thongbao = tostring(fragment) .. "  ( chưa đủ 13k fragment )"
     else
         thongbao = tostring(fragment) 
     end
