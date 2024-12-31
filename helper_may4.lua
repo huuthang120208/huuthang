@@ -5,7 +5,7 @@ _G.Settings_V4 = {
     ["Lever"] = true, 
     ["InVIPServ"] = true, 
     ["HelperNameList"] = { 
-        "InezHarrellbdys38751",
+        "TeresaHornerucct5196",
         "VN5ByLx5"
     },
     ["V4FarmList"] = { 
