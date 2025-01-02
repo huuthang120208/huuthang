@@ -5,30 +5,30 @@ _G.Settings_V4 = {
     ["Lever"] = true, 
     ["InVIPServ"] = true, 
     ["HelperNameList"] = { 
-        "ytjujjznsw54611",
-        "AngelaTippettppqm217"
+        "AngelaTippettppqm217",
+        "xLWzqKcHfYx"
     },
     ["V4FarmList"] = { 
-            "accrrbbloxx7669",
-            "roblox12014605",
-            "nvavsvs666624",
-            "roblox12010523",
-            "roblox12017361",
-            "nvavss363567",
-            "StewartJorge026",
-            "nvavs861303",
-            "WiseFrederick25",
-            "nvavsvs105127",
-            "accrrbbloxx3747",
-            "accrrffroblox6293",
-            "accrrffroblox5690",
-            "HuynhWanda34",
-            "roblox12017747",
-            "ClarkMaurice948",
-            "nvavss442363",
-            "nvavsvs181925",
-            "ClaytonIsabella59",
-            "accrrbbloxx5278"
+            "PXyyIKAxWnA",
+            "GardnerNatalie16",
+            "FBtiZNKLjRh",
+            "oSNCEelkmLI",
+            "wJcYSljGMSr",
+            "QsimkosrjTy",
+            "FboRLfJJhgd",
+            "FuentesAlexandria984",
+            "WebbToni7",
+            "NEkvLqjtzoW",
+            "dmNzdaTfnbR",
+            "BullockJanet94",
+            "UsUoOJUABBW",
+            "PwEMvQFOPRH",
+            "HarrellDarryl29",
+            "nPOSlJQwuxS",
+            "qgdrYeLZvnv",
+            "ColonMariah6",
+            "MurphyBethany37",
+            "SteinEileen3"
     }
 }
 getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"

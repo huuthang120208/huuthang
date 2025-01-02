@@ -5,20 +5,20 @@ function scriptautov4()
         ["Lever"] = true, 
         ["InVIPServ"] = true, 
         ["HelperNameList"] = { 
-            "VanNhiigoq64321",
-            "quangdkr13"
+            "quangdkr13",
+            "shopeeroblox_9IEXXN"
         },
         ["V4FarmList"] = { 
-            "accrrbbloxx4984",
-            "MckinneyApril50",
-            "DudleyShannon5",
-            "CarsonKiara2",
-            "roblox12017511",
-            "ReyesBobby59",
-            "nvavsvs256248",
-            "roblox12019783",
-            "nvavss268577",
-            "MullinsDuck882"
+            "nvavss429813",
+            "accrrffroblox6960",
+            "CopperToni73",
+            "nvavs342590",
+            "nvavsvs364899",
+            "LightLarry0",
+            "nvavs540143",
+            "accrrbbloxx8860",
+            "PowderblueNest993",
+            "accrrbbloxx5696"
         }
     }
     getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
