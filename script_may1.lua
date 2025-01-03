@@ -267,8 +267,5 @@ else
     executeScript()
 end
 while true do
-    if not table.find(HelperNameList, playerName) then
-     wait(60)
      CheckRace()
-    end
 end
