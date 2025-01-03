@@ -1,29 +1,70 @@
-function scriptautov4()
-    _G.Team = "Marine" -- Marine / Pirate
-    _G.Settings_V4 = {
-        ["LockTiers"] = 6, 
-        ["Lever"] = true, 
-        ["InVIPServ"] = true, 
-        ["HelperNameList"] = { 
-            "InezHarrellbdys38751",
-            "VN5ByLx5"
-        },
-        ["V4FarmList"] = { 
-            "Xodeb418228",
-            "Vocup871818",
-            "Cutef863574",
-            "Xaves585207",
-            "Fivek799736",
-            "Mazaf232740",
-            "Cigud690623",
-            "Vudug394876",
-            "Xesey353477",
-            "Fodaz979272"
+local HttpService = game:GetService("HttpService")
+local HelperNameList = { 
+    "quangdkr13",
+    "shopeeroblox_9IEXXN"
+}
+local V4FarmList1 = { 
+    {"nvavss429813", "accrrffroblox6960", "CopperToni73", "nvavs342590", "nvavsvs364899", "LightLarry0", "nvavs540143", "accrrbbloxx8860", "PowderblueNest993", "accrrbbloxx5696"}
+}
+local V4FarmList2 = { 
+    {"roblox12017209", "nvavsvs917916", "CombsJudith091", "nvavsvs338827", "accrrbbloxx9958", "nvavss410919", "VermilionAlexander4", "VerdigrisMatthew172", "accrrffroblox2160", "accrrffroblox5134"}
+}
+local playerName = game.Players.LocalPlayer.Name
+local function executeScript()
+    if table.find(V4FarmList1, playerName) then
+        _G.Team = "Marine" -- Marine / Pirate
+        _G.Settings_V4 = {
+            ["LockTiers"] = 6, 
+            ["Lever"] = true, 
+            ["InVIPServ"] = true, 
+            ["HelperNameList"] = { 
+            "quangdkr13",
+            "shopeeroblox_9IEXXN"
+            },
+            ["V4FarmList"] = { 
+            {"nvavss429813", "accrrffroblox6960", "CopperToni73", "nvavs342590", "nvavsvs364899", "LightLarry0", "nvavs540143", "accrrbbloxx8860", "PowderblueNest993", "accrrbbloxx5696"}
+            }
         }
-    }
-    getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
-    getgenv().id = "1084122060307050586"
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()  
+        getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
+        getgenv().id = "1084122060307050586"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()
+    elseif table.find(V4FarmList2, playerName) then
+        _G.Team = "Marine" -- Marine / Pirate
+        _G.Settings_V4 = {
+            ["LockTiers"] = 6, 
+            ["Lever"] = true, 
+            ["InVIPServ"] = true, 
+            ["HelperNameList"] = { 
+            "quangdkr13",
+            "shopeeroblox_9IEXXN"
+            },
+            ["V4FarmList"] = { 
+            {"roblox12017209", "nvavsvs917916", "CombsJudith091", "nvavsvs338827", "accrrbbloxx9958", "nvavss410919", "VermilionAlexander4", "VerdigrisMatthew172", "accrrffroblox2160", "accrrffroblox5134"}
+            }
+        }
+        getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
+        getgenv().id = "1084122060307050586"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()
+    elseif table.find(HelperNameList, playerName) then
+            _G.Team = "Marine" 
+            _G.Settings_V4 = {
+                ["LockTiers"] = 6, 
+                ["Lever"] = true, 
+                ["InVIPServ"] = true, 
+                ["HelperNameList"] = { 
+                "quangdkr13",
+                "shopeeroblox_9IEXXN"
+                },
+                ["V4FarmList"] = { 
+                {"nvavss429813", "accrrffroblox6960", "CopperToni73", "nvavs342590", "nvavsvs364899", "LightLarry0", "nvavs540143", "accrrbbloxx8860", "PowderblueNest993", "accrrbbloxx5696", "roblox12017209", "nvavsvs917916", "CombsJudith091", "nvavsvs338827", "accrrbbloxx9958", "nvavss410919", "VermilionAlexander4", "VerdigrisMatthew172", "accrrffroblox2160", "accrrffroblox5134"}
+                }
+            }
+            getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
+            getgenv().id = "1084122060307050586"
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()  
+    else
+        print("Tên nhân vật không nằm trong danh sách Helper hoặc Farmer.")
+    end
 end
 local HttpService = game:GetService("HttpService")
 function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, gatcan, color, fragment)
@@ -231,9 +272,9 @@ if game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Co
     end 
     HyperCahaya(CFrame.new(-15852.91796875, 485.5301818847656, 452.25537109375))
     wait(50)
-    scriptautov4()
+    executeScript()
 else
-    scriptautov4()
+    executeScript()
 end
 while true do
     wait(60)     

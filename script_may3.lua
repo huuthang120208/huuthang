@@ -1,29 +1,70 @@
-function scriptautov4()
-    _G.Team = "Marine" -- Marine / Pirate
-    _G.Settings_V4 = {
-        ["LockTiers"] = 6, 
-        ["Lever"] = true, 
-        ["InVIPServ"] = true, 
-        ["HelperNameList"] = { 
-            "quangdkr13",
-            "shopeeroblox_9IEXXN"
-        },
-        ["V4FarmList"] = { 
-            "nvavss429813",
-            "accrrffroblox6960",
-            "CopperToni73",
-            "nvavs342590",
-            "nvavsvs364899",
-            "LightLarry0",
-            "nvavs540143",
-            "accrrbbloxx8860",
-            "PowderblueNest993",
-            "accrrbbloxx5696"
+local HttpService = game:GetService("HttpService")
+local HelperNameList = { 
+    "yzuygnxzxv83024",
+    "thanghuynh111"
+}
+local V4FarmList1 = { 
+    {"Xipeg065119", "Dubuv768981", "Yifug084000", "Wowom694144", "Pumas400867", "Racus224865", "Lonom039395", "Pihoq292205", "Tobek858973", "Xupoc959556"}
+}
+local V4FarmList2 = { 
+    {"Waked784265", "Bafod557121", "Zozub868524", "Golem800364", "Puhin541986", "Xezek992786", "Fewer018133", "Qogir064479", "Heziw086383", "Pagin810210"}
+}
+local playerName = game.Players.LocalPlayer.Name
+local function executeScript()
+    if table.find(V4FarmList1, playerName) then
+        _G.Team = "Marine" -- Marine / Pirate
+        _G.Settings_V4 = {
+            ["LockTiers"] = 6, 
+            ["Lever"] = true, 
+            ["InVIPServ"] = true, 
+            ["HelperNameList"] = { 
+            "yzuygnxzxv83024",
+            "thanghuynh111"
+            },
+            ["V4FarmList"] = { 
+            {"Xipeg065119", "Dubuv768981", "Yifug084000", "Wowom694144", "Pumas400867", "Racus224865", "Lonom039395", "Pihoq292205", "Tobek858973", "Xupoc959556"}
+            }
         }
-    }
-    getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
-    getgenv().id = "1084122060307050586"
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()  
+        getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
+        getgenv().id = "1084122060307050586"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()
+    elseif table.find(V4FarmList2, playerName) then
+        _G.Team = "Marine" -- Marine / Pirate
+        _G.Settings_V4 = {
+            ["LockTiers"] = 6, 
+            ["Lever"] = true, 
+            ["InVIPServ"] = true, 
+            ["HelperNameList"] = { 
+            "yzuygnxzxv83024",
+            "thanghuynh111"
+            },
+            ["V4FarmList"] = { 
+            {"Waked784265", "Bafod557121", "Zozub868524", "Golem800364", "Puhin541986", "Xezek992786", "Fewer018133", "Qogir064479", "Heziw086383", "Pagin810210"}
+            }
+        }
+        getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
+        getgenv().id = "1084122060307050586"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()
+    elseif table.find(HelperNameList, playerName) then
+            _G.Team = "Marine" 
+            _G.Settings_V4 = {
+                ["LockTiers"] = 6, 
+                ["Lever"] = true, 
+                ["InVIPServ"] = true, 
+                ["HelperNameList"] = { 
+                "yzuygnxzxv83024",
+                "thanghuynh111"
+                },
+                ["V4FarmList"] = { 
+                {"Xipeg065119", "Dubuv768981", "Yifug084000", "Wowom694144", "Pumas400867", "Racus224865", "Lonom039395", "Pihoq292205", "Tobek858973", "Xupoc959556", "Waked784265", "Bafod557121", "Zozub868524", "Golem800364", "Puhin541986", "Xezek992786", "Fewer018133", "Qogir064479", "Heziw086383", "Pagin810210"}
+                }
+            }
+            getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
+            getgenv().id = "1084122060307050586"
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()  
+    else
+        print("Tên nhân vật không nằm trong danh sách Helper hoặc Farmer.")
+    end
 end
 local HttpService = game:GetService("HttpService")
 function SendToWebhook(webhookUrl, playerName, race, statusMessage, thongbao, gatcan, color, fragment)
@@ -231,9 +272,9 @@ if game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Co
     end 
     HyperCahaya(CFrame.new(-15852.91796875, 485.5301818847656, 452.25537109375))
     wait(50)
-    scriptautov4()
+    executeScript()
 else
-    scriptautov4()
+    executeScript()
 end
 while true do
     wait(60)     
