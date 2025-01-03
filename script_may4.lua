@@ -58,9 +58,6 @@ local function executeScript()
         getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
         getgenv().id = "1084122060307050586"
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()  
-        while true do
-         CheckRace()
-        end
     else
         print("Tên nhân vật không nằm trong danh sách Helper hoặc Farmer.")
     end
