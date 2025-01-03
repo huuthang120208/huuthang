@@ -3,12 +3,8 @@ local HelperNameList = {
     "AngelaTippettppqm217",
     "xLWzqKcHfYx"
 }
-local V4FarmList1 = { 
-    {"PXyyIKAxWnA", "GardnerNatalie16", "FBtiZNKLjRh", "oSNCEelkmLI", "wJcYSljGMSr", "QsimkosrjTy", "FboRLfJJhgd", "FuentesAlexandria984", "WebbToni7", "NEkvLqjtzoW"}
-}
-local V4FarmList2 = { 
-    {"dmNzdaTfnbR", "BullockJanet94", "UsUoOJUABBW", "PwEMvQFOPRH", "HarrellDarryl29", "nPOSlJQwuxS", "qgdrYeLZvnv", "ColonMariah6", "MurphyBethany37", "SteinEileen3"}
-}
+local V4FarmList1 = {"PXyyIKAxWnA", "GardnerNatalie16", "FBtiZNKLjRh", "oSNCEelkmLI", "wJcYSljGMSr", "QsimkosrjTy", "FboRLfJJhgd", "FuentesAlexandria984", "WebbToni7", "NEkvLqjtzoW"}
+local V4FarmList2 = {"dmNzdaTfnbR", "BullockJanet94", "UsUoOJUABBW", "PwEMvQFOPRH", "HarrellDarryl29", "nPOSlJQwuxS", "qgdrYeLZvnv", "ColonMariah6", "MurphyBethany37", "SteinEileen3"}
 local playerName = game.Players.LocalPlayer.Name
 local function executeScript()
     if table.find(V4FarmList1, playerName) then
@@ -21,9 +17,7 @@ local function executeScript()
             "AngelaTippettppqm217",
             "xLWzqKcHfYx"
             },
-            ["V4FarmList"] = { 
-            {"PXyyIKAxWnA", "GardnerNatalie16", "FBtiZNKLjRh", "oSNCEelkmLI", "wJcYSljGMSr", "QsimkosrjTy", "FboRLfJJhgd", "FuentesAlexandria984", "WebbToni7", "NEkvLqjtzoW"}
-            }
+            ["V4FarmList"] = {"PXyyIKAxWnA", "GardnerNatalie16", "FBtiZNKLjRh", "oSNCEelkmLI", "wJcYSljGMSr", "QsimkosrjTy", "FboRLfJJhgd", "FuentesAlexandria984", "WebbToni7", "NEkvLqjtzoW"} 
         }
         getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
         getgenv().id = "1084122060307050586"
@@ -38,30 +32,26 @@ local function executeScript()
             "AngelaTippettppqm217",
             "xLWzqKcHfYx"
             },
-            ["V4FarmList"] = { 
-            {"dmNzdaTfnbR", "BullockJanet94", "UsUoOJUABBW", "PwEMvQFOPRH", "HarrellDarryl29", "nPOSlJQwuxS", "qgdrYeLZvnv", "ColonMariah6", "MurphyBethany37", "SteinEileen3"}
-            }
+            ["V4FarmList"] = {"dmNzdaTfnbR", "BullockJanet94", "UsUoOJUABBW", "PwEMvQFOPRH", "HarrellDarryl29", "nPOSlJQwuxS", "qgdrYeLZvnv", "ColonMariah6", "MurphyBethany37", "SteinEileen3"}
         }
         getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
         getgenv().id = "1084122060307050586"
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()
     elseif table.find(HelperNameList, playerName) then
-            _G.Team = "Marine" 
-            _G.Settings_V4 = {
-                ["LockTiers"] = 6, 
-                ["Lever"] = true, 
-                ["InVIPServ"] = true, 
-                ["HelperNameList"] = { 
-                "AngelaTippettppqm217",
-                "xLWzqKcHfYx"
-                },
-                ["V4FarmList"] = { 
-                {"PXyyIKAxWnA", "GardnerNatalie16", "FBtiZNKLjRh", "oSNCEelkmLI", "wJcYSljGMSr", "QsimkosrjTy", "FboRLfJJhgd", "FuentesAlexandria984", "WebbToni7", "NEkvLqjtzoW", "dmNzdaTfnbR", "BullockJanet94", "UsUoOJUABBW", "PwEMvQFOPRH", "HarrellDarryl29", "nPOSlJQwuxS", "qgdrYeLZvnv", "ColonMariah6", "MurphyBethany37", "SteinEileen3"}
-                }
-            }
-            getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
-            getgenv().id = "1084122060307050586"
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()  
+        _G.Team = "Marine" 
+        _G.Settings_V4 = {
+            ["LockTiers"] = 6, 
+            ["Lever"] = true, 
+            ["InVIPServ"] = true, 
+            ["HelperNameList"] = { 
+            "AngelaTippettppqm217",
+            "xLWzqKcHfYx"
+            },
+            ["V4FarmList"] = {"PXyyIKAxWnA", "GardnerNatalie16", "FBtiZNKLjRh", "oSNCEelkmLI", "wJcYSljGMSr", "QsimkosrjTy", "FboRLfJJhgd", "FuentesAlexandria984", "WebbToni7", "NEkvLqjtzoW", "dmNzdaTfnbR", "BullockJanet94", "UsUoOJUABBW", "PwEMvQFOPRH", "HarrellDarryl29", "nPOSlJQwuxS", "qgdrYeLZvnv", "ColonMariah6", "MurphyBethany37", "SteinEileen3"}
+        }
+        getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
+        getgenv().id = "1084122060307050586"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()  
     else
         print("Tên nhân vật không nằm trong danh sách Helper hoặc Farmer.")
     end

@@ -3,12 +3,8 @@ local HelperNameList = {
     "InezHarrellbdys38751",
     "VN5ByLx5"
 }
-local V4FarmList1 = { 
-    {"Xodeb418228", "Vocup871818", "Cutef863574", "Xaves585207", "Fivek799736", "Mazaf232740", "Cigud690623", "Vudug394876", "Xesey353477", "Fodaz979272"}
-}
-local V4FarmList2 = { 
-    {"Zumay465873", "Rihin021549", "Kiwot117354", "Hesas709601", "Jugev836866", "Bowis541278", "Qohih750892", "Coyon996959", "Modiw274326", "Xitox934171"}
-}
+local V4FarmList1 = {"Xodeb418228", "Vocup871818", "Cutef863574", "Xaves585207", "Fivek799736", "Mazaf232740", "Cigud690623", "Vudug394876", "Xesey353477", "Fodaz979272"}
+local V4FarmList2 = {"Zumay465873", "Rihin021549", "Kiwot117354", "Hesas709601", "Jugev836866", "Bowis541278", "Qohih750892", "Coyon996959", "Modiw274326", "Xitox934171"}
 local playerName = game.Players.LocalPlayer.Name
 local function executeScript()
     if table.find(V4FarmList1, playerName) then
@@ -21,9 +17,7 @@ local function executeScript()
             "InezHarrellbdys38751",
             "VN5ByLx5"
             },
-            ["V4FarmList"] = { 
-            {"Xodeb418228", "Vocup871818", "Cutef863574", "Xaves585207", "Fivek799736", "Mazaf232740", "Cigud690623", "Vudug394876", "Xesey353477", "Fodaz979272"}
-            }
+            ["V4FarmList"] = {"Xodeb418228", "Vocup871818", "Cutef863574", "Xaves585207", "Fivek799736", "Mazaf232740", "Cigud690623", "Vudug394876", "Xesey353477", "Fodaz979272"} 
         }
         getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
         getgenv().id = "1084122060307050586"
@@ -38,30 +32,26 @@ local function executeScript()
             "InezHarrellbdys38751",
             "VN5ByLx5"
             },
-            ["V4FarmList"] = { 
-            {"Zumay465873", "Rihin021549", "Kiwot117354", "Hesas709601", "Jugev836866", "Bowis541278", "Qohih750892", "Coyon996959", "Modiw274326", "Xitox934171"}
-            }
+            ["V4FarmList"] = {"Zumay465873", "Rihin021549", "Kiwot117354", "Hesas709601", "Jugev836866", "Bowis541278", "Qohih750892", "Coyon996959", "Modiw274326", "Xitox934171"}
         }
         getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
         getgenv().id = "1084122060307050586"
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()
     elseif table.find(HelperNameList, playerName) then
-            _G.Team = "Marine" 
-            _G.Settings_V4 = {
-                ["LockTiers"] = 6, 
-                ["Lever"] = true, 
-                ["InVIPServ"] = true, 
-                ["HelperNameList"] = { 
-                "InezHarrellbdys38751",
-                "VN5ByLx5"
-                },
-                ["V4FarmList"] = { 
-                {"Xodeb418228", "Vocup871818", "Cutef863574", "Xaves585207", "Fivek799736", "Mazaf232740", "Cigud690623", "Vudug394876", "Xesey353477", "Fodaz979272", "Zumay465873", "Rihin021549", "Kiwot117354", "Hesas709601", "Jugev836866", "Bowis541278", "Qohih750892", "Coyon996959", "Modiw274326", "Xitox934171"}
-                }
-            }
-            getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
-            getgenv().id = "1084122060307050586"
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()  
+        _G.Team = "Marine" 
+        _G.Settings_V4 = {
+            ["LockTiers"] = 6, 
+            ["Lever"] = true, 
+            ["InVIPServ"] = true, 
+            ["HelperNameList"] = { 
+            "InezHarrellbdys38751",
+            "VN5ByLx5"
+            },
+            ["V4FarmList"] = {"Xodeb418228", "Vocup871818", "Cutef863574", "Xaves585207", "Fivek799736", "Mazaf232740", "Cigud690623", "Vudug394876", "Xesey353477", "Fodaz979272", "Zumay465873", "Rihin021549", "Kiwot117354", "Hesas709601", "Jugev836866", "Bowis541278", "Qohih750892", "Coyon996959", "Modiw274326", "Xitox934171"}
+        }
+        getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
+        getgenv().id = "1084122060307050586"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()  
     else
         print("Tên nhân vật không nằm trong danh sách Helper hoặc Farmer.")
     end
