@@ -22,6 +22,9 @@ local function executeScript()
         getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
         getgenv().id = "1084122060307050586"
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()
+        while true do
+         CheckRace()
+        end
     elseif table.find(V4FarmList2, playerName) then
         _G.Team = "Marine" -- Marine / Pirate
         _G.Settings_V4 = {
@@ -37,6 +40,9 @@ local function executeScript()
         getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
         getgenv().id = "1084122060307050586"
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()
+        while true do
+         CheckRace()
+        end
     elseif table.find(HelperNameList, playerName) then
         _G.Team = "Marine" 
         _G.Settings_V4 = {
@@ -52,6 +58,9 @@ local function executeScript()
         getgenv().Key = "MARU_V4-KRVC0Z7XJB7VYNW"
         getgenv().id = "1084122060307050586"
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()  
+        while true do
+         CheckRace()
+        end
     else
         print("Tên nhân vật không nằm trong danh sách Helper hoặc Farmer.")
     end
@@ -265,7 +274,4 @@ if game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Co
     executeScript()
 else
     executeScript()
-end
-while true do
-     CheckRace()
 end
