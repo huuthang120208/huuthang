@@ -1,7 +1,7 @@
 local HttpService = game:GetService("HttpService")
 local HelperNameList = { 
     "yzuygnxzxv83024",
-    "thanghuynh111"
+    "altruizmuke"
 }
 local V4FarmList1 = {"Xipeg065119", "Dubuv768981", "Yifug084000", "Wowom694144", "Pumas400867", "Racus224865", "Lonom039395", "Pihoq292205", "Tobek858973", "Xupoc959556"}
 local V4FarmList2 = {"Waked784265", "Bafod557121", "Zozub868524", "Golem800364", "Puhin541986", "Xezek992786", "Fewer018133", "Qogir064479", "Heziw086383", "Pagin810210"}
@@ -15,7 +15,7 @@ local function executeScript()
             ["InVIPServ"] = true, 
             ["HelperNameList"] = { 
             "yzuygnxzxv83024",
-            "thanghuynh111"
+            "altruizmuke"
             },
             ["V4FarmList"] = {"Xipeg065119", "Dubuv768981", "Yifug084000", "Wowom694144", "Pumas400867", "Racus224865", "Lonom039395", "Pihoq292205", "Tobek858973", "Xupoc959556"} 
         }
@@ -33,7 +33,7 @@ local function executeScript()
             ["InVIPServ"] = true, 
             ["HelperNameList"] = { 
             "yzuygnxzxv83024",
-            "thanghuynh111"
+            "altruizmuke"
             },
             ["V4FarmList"] = {"Waked784265", "Bafod557121", "Zozub868524", "Golem800364", "Puhin541986", "Xezek992786", "Fewer018133", "Qogir064479", "Heziw086383", "Pagin810210"}
         }
@@ -51,7 +51,7 @@ local function executeScript()
             ["InVIPServ"] = true, 
             ["HelperNameList"] = { 
             "yzuygnxzxv83024",
-            "thanghuynh111"
+            "altruizmuke"
             },
             ["V4FarmList"] = {"Xipeg065119", "Dubuv768981", "Yifug084000", "Wowom694144", "Pumas400867", "Racus224865", "Lonom039395", "Pihoq292205", "Tobek858973", "Xupoc959556", "Waked784265", "Bafod557121", "Zozub868524", "Golem800364", "Puhin541986", "Xezek992786", "Fewer018133", "Qogir064479", "Heziw086383", "Pagin810210"}
         }
