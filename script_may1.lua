@@ -24,6 +24,7 @@ local function executeScript()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()
         while true do
          CheckRace()
+         wait(30)
         end
     elseif table.find(V4FarmList2, playerName) then
         _G.Team = "Marine" -- Marine / Pirate
@@ -42,6 +43,7 @@ local function executeScript()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MasterPClient/main/Loader.lua"))()
         while true do
          CheckRace()
+         wait(30)
         end
     elseif table.find(HelperNameList, playerName) then
         _G.Team = "Marine" 
