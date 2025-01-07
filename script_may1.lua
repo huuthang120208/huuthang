@@ -224,32 +224,14 @@ function CheckRace()
         )
     end
 end
-function jointeam()
- do
-    repeat
-        local player = game:GetService("Players").LocalPlayer
-        local mainGui = player.PlayerGui:FindFirstChild("Main (minimal)")
-        if mainGui then
-            local ChooseTeam = mainGui:FindFirstChild("ChooseTeam", true)
-            if ChooseTeam and ChooseTeam.Visible then
-                for i, v in pairs(getgc()) do
-                    if type(v) == "function" then
-                        local success, constants = pcall(getconstants, v)
-                        if success and constants and table.find(constants, "Marines") then
-                            pcall(function()
-                                v(shared.Team or "Marines")
-                            end)
-                        end
-                    end
-                end
-            end
-        end
-        wait(1)
-    until game.Players.LocalPlayer.Team
-    repeat wait() until game.Players.LocalPlayer.Character
- end
+do
+    do
+        repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer("SetTeam", "Marines") -- Marines / Pirates
+        until game.Players.LocalPlayer.Team
+        repeat wait() until game.Players.LocalPlayer.Character
+    end
 end
-jointeam()
 while true do
     if game.PlaceId == 7449423635 then
         break

@@ -1,6 +1,6 @@
 local HttpService = game:GetService("HttpService")
 local HelperNameList = { 
-    "AngelaTippettppqm217",
+    "ytjujjznsw54611",
     "xLWzqKcHfYx"
 }
 local V4FarmList1 = {"PXyyIKAxWnA", "GardnerNatalie16", "FBtiZNKLjRh", "oSNCEelkmLI", "wJcYSljGMSr", "QsimkosrjTy", "FboRLfJJhgd", "FuentesAlexandria984", "WebbToni7", "NEkvLqjtzoW"}
@@ -14,7 +14,7 @@ local function executeScript()
             ["Lever"] = true, 
             ["InVIPServ"] = true, 
             ["HelperNameList"] = { 
-            "AngelaTippettppqm217",
+            "ytjujjznsw54611",
             "xLWzqKcHfYx"
             },
             ["V4FarmList"] = {"PXyyIKAxWnA", "GardnerNatalie16", "FBtiZNKLjRh", "oSNCEelkmLI", "wJcYSljGMSr", "QsimkosrjTy", "FboRLfJJhgd", "FuentesAlexandria984", "WebbToni7", "NEkvLqjtzoW"} 
@@ -33,7 +33,7 @@ local function executeScript()
             ["Lever"] = true, 
             ["InVIPServ"] = true, 
             ["HelperNameList"] = { 
-            "AngelaTippettppqm217",
+            "ytjujjznsw54611",
             "xLWzqKcHfYx"
             },
             ["V4FarmList"] = {"dmNzdaTfnbR", "BullockJanet94", "UsUoOJUABBW", "PwEMvQFOPRH", "HarrellDarryl29", "nPOSlJQwuxS", "qgdrYeLZvnv", "ColonMariah6", "MurphyBethany37", "SteinEileen3"}
@@ -52,7 +52,7 @@ local function executeScript()
             ["Lever"] = true, 
             ["InVIPServ"] = true, 
             ["HelperNameList"] = { 
-            "AngelaTippettppqm217",
+            "ytjujjznsw54611",
             "xLWzqKcHfYx"
             },
             ["V4FarmList"] = {"PXyyIKAxWnA", "GardnerNatalie16", "FBtiZNKLjRh", "oSNCEelkmLI", "wJcYSljGMSr", "QsimkosrjTy", "FboRLfJJhgd", "FuentesAlexandria984", "WebbToni7", "NEkvLqjtzoW", "dmNzdaTfnbR", "BullockJanet94", "UsUoOJUABBW", "PwEMvQFOPRH", "HarrellDarryl29", "nPOSlJQwuxS", "qgdrYeLZvnv", "ColonMariah6", "MurphyBethany37", "SteinEileen3"}
@@ -224,32 +224,14 @@ function CheckRace()
         )
     end
 end
-function jointeam()
- do
-    repeat
-        local player = game:GetService("Players").LocalPlayer
-        local mainGui = player.PlayerGui:FindFirstChild("Main (minimal)")
-        if mainGui then
-            local ChooseTeam = mainGui:FindFirstChild("ChooseTeam", true)
-            if ChooseTeam and ChooseTeam.Visible then
-                for i, v in pairs(getgc()) do
-                    if type(v) == "function" then
-                        local success, constants = pcall(getconstants, v)
-                        if success and constants and table.find(constants, "Marines") then
-                            pcall(function()
-                                v(shared.Team or "Marines")
-                            end)
-                        end
-                    end
-                end
-            end
-        end
-        wait(1)
-    until game.Players.LocalPlayer.Team
-    repeat wait() until game.Players.LocalPlayer.Character
- end
+do
+    do
+        repeat
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer("SetTeam", "Marines") -- Marines / Pirates
+        until game.Players.LocalPlayer.Team
+        repeat wait() until game.Players.LocalPlayer.Character
+    end
 end
-jointeam()
 while true do
     if game.PlaceId == 7449423635 then
         break
