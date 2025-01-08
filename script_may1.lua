@@ -1,7 +1,7 @@
 local HttpService = game:GetService("HttpService")
 local HelperNameList = { 
     "VanNhiigoq64321",
-    "shopeeroblox_9IEXXN"
+    "quangdkr13"
 }
 local V4FarmList1 = {"nvavss429813", "accrrffroblox6960", "CopperToni73", "nvavs342590", "nvavsvs364899", "LightLarry0", "nvavs540143", "accrrbbloxx8860", "PowderblueNest993", "accrrbbloxx5696"}
 local V4FarmList2 = {"roblox12017209", "nvavsvs917916", "CombsJudith091", "nvavsvs338827", "accrrbbloxx9958", "nvavss410919", "VermilionAlexander4", "VerdigrisMatthew172", "accrrffroblox2160", "accrrffroblox5134"}
@@ -15,7 +15,7 @@ local function executeScript()
             ["InVIPServ"] = true, 
             ["HelperNameList"] = { 
             "VanNhiigoq64321",
-            "shopeeroblox_9IEXXN"
+            "quangdkr13"
             },
             ["V4FarmList"] = {"nvavss429813", "accrrffroblox6960", "CopperToni73", "nvavs342590", "nvavsvs364899", "LightLarry0", "nvavs540143", "accrrbbloxx8860", "PowderblueNest993", "accrrbbloxx5696"} 
         }
@@ -34,7 +34,7 @@ local function executeScript()
             ["InVIPServ"] = true, 
             ["HelperNameList"] = { 
             "VanNhiigoq64321",
-            "shopeeroblox_9IEXXN"
+            "quangdkr13"
             },
             ["V4FarmList"] = {"roblox12017209", "nvavsvs917916", "CombsJudith091", "nvavsvs338827", "accrrbbloxx9958", "nvavss410919", "VermilionAlexander4", "VerdigrisMatthew172", "accrrffroblox2160", "accrrffroblox5134"}
         }
@@ -53,7 +53,7 @@ local function executeScript()
             ["InVIPServ"] = true, 
             ["HelperNameList"] = { 
             "VanNhiigoq64321",
-            "shopeeroblox_9IEXXN"
+            "quangdkr13"
             },
             ["V4FarmList"] = {"nvavss429813", "accrrffroblox6960", "CopperToni73", "nvavs342590", "nvavsvs364899", "LightLarry0", "nvavs540143", "accrrbbloxx8860", "PowderblueNest993", "accrrbbloxx5696", "roblox12017209", "nvavsvs917916", "CombsJudith091", "nvavsvs338827", "accrrbbloxx9958", "nvavss410919", "VermilionAlexander4", "VerdigrisMatthew172", "accrrffroblox2160", "accrrffroblox5134"}
         }
