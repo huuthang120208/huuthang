@@ -1,6 +1,6 @@
 local HttpService = game:GetService("HttpService")
 local HelperNameList = { 
-    "quangdkr13",
+    "VanNhiigoq64321",
     "shopeeroblox_9IEXXN"
 }
 local V4FarmList1 = {"nvavss429813", "accrrffroblox6960", "CopperToni73", "nvavs342590", "nvavsvs364899", "LightLarry0", "nvavs540143", "accrrbbloxx8860", "PowderblueNest993", "accrrbbloxx5696"}
@@ -14,7 +14,7 @@ local function executeScript()
             ["Lever"] = true, 
             ["InVIPServ"] = true, 
             ["HelperNameList"] = { 
-            "quangdkr13",
+            "VanNhiigoq64321",
             "shopeeroblox_9IEXXN"
             },
             ["V4FarmList"] = {"nvavss429813", "accrrffroblox6960", "CopperToni73", "nvavs342590", "nvavsvs364899", "LightLarry0", "nvavs540143", "accrrbbloxx8860", "PowderblueNest993", "accrrbbloxx5696"} 
@@ -33,7 +33,7 @@ local function executeScript()
             ["Lever"] = true, 
             ["InVIPServ"] = true, 
             ["HelperNameList"] = { 
-            "quangdkr13",
+            "VanNhiigoq64321",
             "shopeeroblox_9IEXXN"
             },
             ["V4FarmList"] = {"roblox12017209", "nvavsvs917916", "CombsJudith091", "nvavsvs338827", "accrrbbloxx9958", "nvavss410919", "VermilionAlexander4", "VerdigrisMatthew172", "accrrffroblox2160", "accrrffroblox5134"}
@@ -52,7 +52,7 @@ local function executeScript()
             ["Lever"] = true, 
             ["InVIPServ"] = true, 
             ["HelperNameList"] = { 
-            "quangdkr13",
+            "VanNhiigoq64321",
             "shopeeroblox_9IEXXN"
             },
             ["V4FarmList"] = {"nvavss429813", "accrrffroblox6960", "CopperToni73", "nvavs342590", "nvavsvs364899", "LightLarry0", "nvavs540143", "accrrbbloxx8860", "PowderblueNest993", "accrrbbloxx5696", "roblox12017209", "nvavsvs917916", "CombsJudith091", "nvavsvs338827", "accrrbbloxx9958", "nvavss410919", "VermilionAlexander4", "VerdigrisMatthew172", "accrrffroblox2160", "accrrffroblox5134"}
